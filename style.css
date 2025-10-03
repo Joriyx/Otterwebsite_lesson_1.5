@@ -2,13 +2,49 @@ header, footer {
     background-color: burlywood;
 }
 
+nav a {
+    text-decoration: none;
+    color: black;
+    padding-right: 10px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav ul {
+    padding: 0;
+}
+
 img {
    width: 30%;
    height: 25%;
 }
 
+.active {
+    text-decoration: underline;
+}
+
 .cta {
-    background-color: aqua;
+    background-color: rgb(172, 60, 60);
+    color: azure;
     border-radius: 10px;
     font-size: 2em;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.Send-cta{
+   background-color: black;
+   color: azure;
+   margin-bottom: 5px;
+}
+
+.message-textbox {
+    border-radius: 5px;
+    min-height: 3em;
+}
+
+footer{
+    margin-top: 10px;
 }
