@@ -4,39 +4,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-        <meta name="descrption" content="Get real authentic, hand-crafted guitars from Guitar Kings "/>
-        <link href="style.css" rel="stylesheet"/>
-    <title>OtterFriends|About </title>
+    <meta
+      name="descrption"
+      content="Get real authentic, hand-crafted guitars from Guitar Kings "
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/0a8e5b1fd3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>OtterFriends|About</title>
   </head>
-  <main>
-    <body>
-      <header>
-      <H1>OtterFriends</H1>
+  <body>
+    <header>
+      <h1>OtterFriends</h1>
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox"><i class="fa-solid fa-bars"></i></label>
       <nav>
         <ul>
-         <li><a href="index.html">Home</a></LI>
-         <li><a href="plushies.html">Plushies</a></li>
-         <li><a href="About.html" class="active">about</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plushies.html">Plushies</a></li>
+          <li><a href="About.html" class="active">about</a></li>
         </ul>
-        </nav>
-      </header>  
-        <section>
-         <h2>We are the OtterFriends</h2>
-         <p>We sell otters plush, Every otterfriends plush comes with its own unique history</p>
-         <p>Contact us via this form</p>
-         <form method="post">
-          <label for="fname">First name</label>
-          <input type="text" name="fname" id="fname">
-          <label for="lname">Last name</label>
-          <input type="text" name="lname" id="lname">
-           <label for="email">Email</label>
-          <input type="email" name="email" id="email">
-           <label for="message">Message</label>
-          <textarea name="message" id="message" class="message-textbox"></textarea>
-          <input type="submit" value="Send Now" class="Send-cta" >
-         </form>
-        </section>
+      </nav>
+    </header>
+    <main>
+      <section class="about-us-page">
+        <div class="about-us">
+          <h2>We are the OtterFriends</h2>
+          <p>
+            We sell otters plush, Every otterfriends plush comes with its own
+            unique history
+          </p>
+          <h3>Contact us via this form</h3>
+        </div>
+        <form method="post">
+          <div class="f_l_e-div">
+            <label for="fname">First name</label>
+            <input type="text" name="fname" id="fname" class="wtriting-place" />
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" id="lname" class="wtriting-place" />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="wtriting-place"
+            />
+          </div>
+          <div class="message-div">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              class="message-textbox"
+            ></textarea>
+          </div>
+          <input type="submit" value="Send Now" class="Send-cta" />
+        </form>
+      </section>
     </main>
-     <Footer>Copyright &copy;</Footer>
-       </body>
+    <footer>Copyright &copy;</footer>
+  </body>
 </html>

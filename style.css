@@ -1,50 +1,347 @@
-header, footer {
-    background-color: burlywood;
+header,
+footer {
+  background-color: burlywood;
+  height: 60px;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    padding-right: 10px;
+  text-decoration: none;
+  color: black;
+  padding-right: 10px;
 }
 
 nav li {
-    display: inline;
+  display: inline;
 }
 
 nav ul {
-    padding: 0;
+  padding: 0;
 }
 
 img {
-   width: 30%;
-   height: 25%;
+  width: 30%;
+  height: 25%;
 }
 
 .active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .cta {
-    background-color: rgb(172, 60, 60);
-    color: azure;
-    border-radius: 10px;
-    font-size: 2em;
-    padding: 10px 50px;
-    text-decoration: none;
+  background-color: rgb(172, 60, 60);
+  color: azure;
+  border-radius: 10px;
+  font-size: 2em;
+  padding: 10px 50px;
+  text-decoration: none;
 }
 
-.Send-cta{
-   background-color: black;
-   color: azure;
-   margin-bottom: 5px;
+.Send-cta {
+  background-color: black;
+  color: azure;
+  margin-bottom: 5px;
 }
 
 .message-textbox {
-    border-radius: 5px;
-    min-height: 3em;
+  border-radius: 5px;
+  min-height: 3em;
 }
 
-footer{
-    margin-top: 10px;
+footer {
+  margin-top: 10px;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  justify-content: space-around;
+  position: relative;
+}
+
+header nav,
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox ~ label {
+  display: block;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+header nav {
+  position: absolute;
+  background: burlywood;
+  top: 50px;
+  right: 0;
+}
+
+header nav a {
+  display: block;
+  color: black;
+  padding: 10px 20px;
+}
+
+header nav li {
+  display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.welcome {
+  background-image: url(images/otters_homepage.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  min-height: 100vh;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  gap: 550px;
+}
+
+.welcome-content h2 {
+  margin: 0;
+  font-size: 2em;
+  color: azure;
+}
+
+.welcome-content a {
+  margin: 0;
+  font-size: 1em;
+}
+
+footer {
+  margin: 0;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: rgb(219, 219, 207);
+}
+
+.plushies-list {
+  display: grid;
+  grid-template-rows: 60px auto auto auto auto auto auto;
+}
+
+.plushies-list h2 {
+  justify-self: center;
+}
+
+.plushies-card {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.plushies-card img {
+  flex: 1;
+  object-fit: cover;
+}
+
+.plushies-card h2 {
+  order: 1;
+  margin: 5px;
+}
+
+.descrption {
+  max-width: 200px;
+  margin: 5px;
+}
+
+.prize {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.about-us-page {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin: 50px;
+  justify-content: center;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us h2 {
+  margin-top: 0;
+}
+
+.about-us p {
+  max-width: 250px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 350px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.wtriting-place {
+  border-radius: 6px;
+  border: solid 1px black;
+  font-size: 1.2em;
+}
+
+.message-textbox {
+  border-radius: 6px;
+  height: 100px;
+  border: solid 1px black;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.Send-cta {
+  padding: 8px 40px;
+  font-size: 1em;
+  align-self: center;
+}
+
+.f_l_e-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 750px) {
+  #menu-checkbox,
+  #menu-checkbox ~ label {
+    display: none;
+  }
+
+  header nav {
+    display: inline;
+    background-color: transparent;
+    position: static;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    position: static;
+    font-weight: bold;
+  }
+
+  header nav a {
+    color: black;
+    padding: 10px 20px;
+  }
+
+  .plushies-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 60px auto auto auto;
+    margin: 50px;
+  }
+
+  .plushies-list h2 {
+    grid-area: 1/1/2/3;
+    margin-top: 0;
+  }
+
+  .about-us-page {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 80px;
+    justify-content: center;
+  }
+
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us h2 {
+    margin-top: 0;
+  }
+
+  .about-us p {
+    max-width: 250px;
+  }
+
+  form {
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .f_l_e-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message-div {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .message-textbox {
+    flex-grow: 1;
+  }
+
+  .Send-cta {
+    grid-area: 2/1/3/3;
+    justify-self: center;
+  }
+
+  .wtriting-place {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .plushies-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 60px auto auto auto;
+    margin: 50px;
+  }
+
+  .plushies-list h2 {
+    grid-area: 1/1/2/4;
+    margin-top: 0;
+  }
+
+  .wtriting-place {
+    font-size: 2em;
+  }
+
+  .about-us-page {
+    margin: 70px;
+  }
 }
