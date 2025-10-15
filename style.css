@@ -34,6 +34,26 @@ img {
   font-size: 2em;
   padding: 10px 50px;
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: "";
+  padding: 10px;
+  height: 100px;
+  background-color: white;
+  opacity: 0.3;
+  position: absolute;
+  transition: left ease-in-out 500ms;
+  left: -40px;
+  top: -40px;
+  rotate: 45deg;
+}
+
+.cta:hover::before {
+  left: 110%;
 }
 
 .Send-cta {
@@ -232,6 +252,19 @@ form {
 .message-div {
   display: flex;
   flex-direction: column;
+}
+
+.plushies-list {
+  animation: show-plushies 1s forwards;
+}
+
+@keyframes show-plushies {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 750px) {
